@@ -1,0 +1,125 @@
+/* =============================================
+   Styleguide: Basis CSS-variabelen
+   ============================================= */
+
+   :root {
+    /* ========= Typografie ========= */
+    --heading-font: 'Poppins', sans-serif;
+    --site-font: 'Poppins', sans-serif;
+    --button-font: 'Proxima Nova', sans-serif;
+    --icon-font: 'actk-icons', serif;
+
+    /* ========= Fontgroottes (mobiel standaard) ========= */
+    --fs-huge: 3rem;
+    --fs-large: 2.5rem;
+    --fs-medium: 1.8rem;
+    --fs-normal: 1.2rem;
+    --fs-small: 1rem;
+    --fs-menu: var(--fs-normal);
+
+    /* ========= Lijnhoogtes ========= */
+    --lh-huge: 1;
+    --lh-large: 4rem;
+    --lh-medium: 1.8rem;
+    --lh-normal: 1.6rem;
+    --lh-small: 1;
+
+    /* ========= Kleuren ========= */
+    --black: #000000;
+    --white: #FFFFFF;
+    --primary-color: var(--black);
+    --primary-color-alt: #F6F3E8;
+    --secondary-color: #C3BCA4;
+    --secondary-color-light: #F6F3E8;
+    --accent-color: #FFC700;
+    --hover-color: #413508;
+    --accent2-color: #FFC700;
+
+    --color-danger: #D44848;
+    --color-success: #4BAB33;
+    --color-gray: #CCCCCC;
+    --color-lightgray: #D9D9D9;
+
+    --border-color: var(--black);
+
+    /* ========= Knoppen ========= */
+    --button-primary-color: #D0D5DD;
+    --button-tertiary-color: #ECECED;
+
+    /* ========= Achtergronden ========= */
+    --website-background: var(--white);
+    --main-text-color: var(--black);
+    --background-color-3: var(--primary-color-alt);
+    --background-color-4: var(--secondary-color);
+
+    /* ========= Afmetingen ========= */
+    --header-height: 9.6rem;
+    --site-x-padding: 2.5rem;
+    --site-width: 100%;
+    --column-gap: 2.5rem;
+
+    /* ========= Hoeken ========= */
+    --border-radius: 1rem;
+}
+
+/* =============================================
+   Media Queries: Mobile First
+   ============================================= */
+
+/* Voor tablets (min-width: 481px) */
+@media screen and (min-width: 481px) {
+    :root {
+        --fs-huge: 4rem;
+        --fs-large: 3rem;
+        --fs-medium: 2rem;
+        --fs-normal: 1.4rem;
+        --fs-small: 1.2rem;
+
+        --header-height: 11rem;
+        --column-gap: 3rem;
+    }
+}
+
+/* Voor standaard tablets en kleine laptops (min-width: 769px) */
+@media screen and (min-width: 769px) {
+    :root {
+        --fs-huge: 5rem;
+        --fs-large: 3.6rem;
+        --fs-medium: 2.2rem;
+        --fs-normal: 1.6rem;
+        --fs-small: 1.3rem;
+
+        --header-height: 11.7rem;
+        --site-x-padding: 3.5rem;
+        --column-gap: 3.5rem;
+    }
+}
+
+/* Voor grotere schermen (min-width: 1201px) */
+@media screen and (min-width: 1201px) {
+    :root {
+        --fs-huge: 6rem;
+        --fs-large: 4.2rem;
+        --fs-medium: 2.5rem;
+        --fs-normal: 1.8rem;
+        --fs-small: 1.5rem;
+
+        --site-width: 124.3rem;
+    }
+}
+
+/* =============================================
+   Custom Fonts
+   ============================================= */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?kxkprt');
+    src: url('../fonts/icomoon.eot?kxkprt#iefix') format('embedded-opentype'),
+         url('../fonts/icomoon.ttf?kxkprt') format('truetype'),
+         url('../fonts/icomoon.woff?kxkprt') format('woff'),
+         url('../fonts/icomoon.svg?kxkprt#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
