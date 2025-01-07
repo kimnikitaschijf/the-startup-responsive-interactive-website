@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacatures</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styleguide.scss">
+
+</head>
+
+<body>
+    <header>
+        <div id="logo">Logo</div>
+        <h1>Vacatures</h1>
+        <button id="profiel-button">Profiel</button>
+        <button id="menu-button">Menu</button>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Kies een beroep">
+                <input type="text" id="location-input" placeholder="Voer plaats / postcode in">
+            </form>
+            <div id="filters">
+                <button>Beroepen</button>
+                <button>Werkomgeving</button>
+                <button>Type baan</button>
+                <button>Afstand</button>
+                <button>Salaris</button>
+                <button>Reiskostenvergoeding</button>
+                <button>Collega's</button>
+            </div>
+            <div>
+                <button>Wis alle filters</button>
+            </div>
+        </section>
+
+        <section id="results-section">
+            <button>Plaats je CV</button>
+            <div id="sorting">
+                <span>Sorteer op:</span>
+                <button>Relevantie</button>
+                <button>Datum</button>
+                <button>Afstand</button>
+            </div>
+
+            <div class="vacature-card">
+                <h2 class="vacature-titel"></h2>
+                <p class="vacature-locatie"></p>
+                <p class="vacature-salaris"></p>
+                <p class="vacature-beschrijving"></p>
+                <button class="vacature-knop"></button>
+            </div>
+            </div>
+        </section>
+</body>
+
+</html>
