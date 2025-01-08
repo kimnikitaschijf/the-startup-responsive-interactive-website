@@ -1,64 +1,82 @@
 /* =============================================
-   Styleguide: Basis CSS-variabelen
+   Basis CSS
    ============================================= */
 
-   :root {
-    /* ========= Typografie ========= */
+   * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*:focus-visible {
+    outline: none;
+    box-shadow: 0px 10px 20px 0px var(--box-shadow);
+}
+
+/* =============================================
+   CSS-variabelen
+   ============================================= */
+
+:root {
+    /* Typografie */
     --heading-font: 'Poppins', sans-serif;
     --site-font: 'Poppins', sans-serif;
     --button-font: 'Proxima Nova', sans-serif;
     --icon-font: 'actk-icons', serif;
 
-    /* ========= Fontgroottes (mobiel standaard) ========= */
-    --fs-huge: 3rem;
-    --fs-large: 2.5rem;
-    --fs-medium: 1.8rem;
-    --fs-normal: 1.2rem;
-    --fs-small: 1rem;
-    --fs-menu: var(--fs-normal);
+    /* Fontgroottes (mobiel standaard) */
+    --font-size-huge: 3rem;
+    --font-size-large: 2.5rem;
+    --font-size-medium: 1.8rem;
+    --font-size-normal: 1.2rem;
+    --font-size-small: 1rem;
+    --font-size-menu: var(--font-size-normal);
 
-    /* ========= Lijnhoogtes ========= */
-    --lh-huge: 1;
-    --lh-large: 4rem;
-    --lh-medium: 1.8rem;
-    --lh-normal: 1.6rem;
-    --lh-small: 1;
+    /* Lijnhoogtes */
+    --line-height-huge: 1;
+    --line-height-large: 4rem;
+    --line-height-medium: 1.8;
+    --line-height-normal: 1.6;
+    --line-height-small: 1;
 
-    /* ========= Kleuren ========= */
+    /* Kleuren */
     --black: #000000;
     --white: #FFFFFF;
+    --box-shadow: #0000001a;
+
     --primary-color: var(--black);
     --primary-color-alt: #F6F3E8;
     --secondary-color: #C3BCA4;
     --secondary-color-light: #F6F3E8;
+
     --accent-color: #FFC700;
     --hover-color: #413508;
-    --accent2-color: #FFC700;
 
-    --color-danger: #D44848;
+    --primary-text-color: var(--black);
+    --secondary-text-color: var(--white);
+
+    --error-color: #D44848;
     --color-success: #4BAB33;
+
     --color-gray: #CCCCCC;
     --color-lightgray: #D9D9D9;
 
-    --border-color: var(--black);
+    /* Knoppen */
+    --button-color: #FFC700;
+    --button-hover: #413508;
 
-    /* ========= Knoppen ========= */
-    --button-primary-color: #D0D5DD;
-    --button-tertiary-color: #ECECED;
-
-    /* ========= Achtergronden ========= */
+    /* Achtergronden */
     --website-background: var(--white);
     --main-text-color: var(--black);
     --background-color-3: var(--primary-color-alt);
     --background-color-4: var(--secondary-color);
 
-    /* ========= Afmetingen ========= */
+    /* Afmetingen */
     --header-height: 9.6rem;
     --site-x-padding: 2.5rem;
     --site-width: 100%;
     --column-gap: 2.5rem;
 
-    /* ========= Hoeken ========= */
+    /* Hoeken */
     --border-radius: 1rem;
 }
 
@@ -66,28 +84,26 @@
    Media Queries: Mobile First
    ============================================= */
 
-/* Voor tablets (min-width: 481px) */
 @media screen and (min-width: 481px) {
     :root {
-        --fs-huge: 4rem;
-        --fs-large: 3rem;
-        --fs-medium: 2rem;
-        --fs-normal: 1.4rem;
-        --fs-small: 1.2rem;
+        --font-size-huge: 4rem;
+        --font-size-large: 3rem;
+        --font-size-medium: 2rem;
+        --font-size-normal: 1.4rem;
+        --font-size-small: 1.2rem;
 
         --header-height: 11rem;
         --column-gap: 3rem;
     }
 }
 
-/* Voor standaard tablets en kleine laptops (min-width: 769px) */
 @media screen and (min-width: 769px) {
     :root {
-        --fs-huge: 5rem;
-        --fs-large: 3.6rem;
-        --fs-medium: 2.2rem;
-        --fs-normal: 1.6rem;
-        --fs-small: 1.3rem;
+        --font-size-huge: 5rem;
+        --font-size-large: 3.6rem;
+        --font-size-medium: 2.2rem;
+        --font-size-normal: 1.6rem;
+        --font-size-small: 1.3rem;
 
         --header-height: 11.7rem;
         --site-x-padding: 3.5rem;
@@ -95,14 +111,13 @@
     }
 }
 
-/* Voor grotere schermen (min-width: 1201px) */
 @media screen and (min-width: 1201px) {
     :root {
-        --fs-huge: 6rem;
-        --fs-large: 4.2rem;
-        --fs-medium: 2.5rem;
-        --fs-normal: 1.8rem;
-        --fs-small: 1.5rem;
+        --font-size-huge: 6rem;
+        --font-size-large: 4.2rem;
+        --font-size-medium: 2.5rem;
+        --font-size-normal: 1.8rem;
+        --font-size-small: 1.5rem;
 
         --site-width: 124.3rem;
     }
@@ -114,12 +129,153 @@
 
 @font-face {
     font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?kxkprt');
-    src: url('../fonts/icomoon.eot?kxkprt#iefix') format('embedded-opentype'),
-         url('../fonts/icomoon.ttf?kxkprt') format('truetype'),
-         url('../fonts/icomoon.woff?kxkprt') format('woff'),
-         url('../fonts/icomoon.svg?kxkprt#icomoon') format('svg');
+    src: url('/fonts/icomoon.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;
+}
+
+/* =============================================
+   Standaard Elementen
+   ============================================= */
+
+body {
+    background-color: var(--website-background);
+    color: var(--main-text-color);
+}
+
+/* =============================================
+   Formulierelementen
+   ============================================= */
+
+form {
+    display: grid;
+    gap: 1em;
+    padding: 2em;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+label {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: var(--line-height-normal);
+    display: block;
+}
+
+input {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: .8em 1em;
+    width: 100%;
+    color: var(--primary-text-color);
+    margin-top: .5em;
+    line-height: var(--line-height-normal);
+}
+
+input[type="submit"] {
+    background-color: var(--button-color);
+    color: var(--secondary-text-color);
+    padding: 0.7em 1.4em;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    width: 60%;
+    transition: transform .2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--button-hover);
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Styling fieldset */
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+fieldset input {
+    accent-color: var(--accent-color);
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0em 0.6em;
+}
+
+input:invalid {
+    border: 2px solid var(--error-color);
+    background-color: var(--white);
+}
+
+fieldset label {
+    align-items: center;
+    display: flex;
+}
+
+legend {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: 1.5em;
+    display: block;
+    margin-bottom: 0.8em;
+}
+
+.req {
+    color: var(--error-color);
+}
+
+/* =============================================
+   Knoppen
+   ============================================= */
+
+#knoppen {
+    padding: 3em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#knoppen p {
+    margin: -0.9em 0 1em 0;
+}
+
+/* =============================================
+   Links
+   ============================================= */
+
+a {
+    font-size: var(--font-size-normal);
+    line-height: var(--line-height-normal);
+    color: var(--main-text-color);
+    transition: transform ease-in-out .2s;
+}
+
+a:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Knop geel */
+a.btn-geel {
+    align-self: baseline;
+    background-color: var(--button-color);
+    color: var(--secondary-text-color);
+    padding: 0.7em 1.4em;
+    border-radius: 100px;
+    text-decoration: none;
+    gap: 0.5em;
+    transition: transform .2s ease-in-out;
+    font-weight: 600;
+    align-items: center;
+    display: inline-flex;
+    font-size: var(--font-size-normal);
+}
+
+.btn-oranje img {
+    align-items: center;
+    width: 0.9em;
+}
+
+a.btn-oranje:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
 }
