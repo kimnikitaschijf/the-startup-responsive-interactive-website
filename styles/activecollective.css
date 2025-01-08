@@ -2,7 +2,7 @@
    Basis CSS
    ============================================= */
 
-   * {
+* {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -16,7 +16,7 @@
    CSS-variabelen
    ============================================= */
 
-:root {
+body {
     /* Typografie */
     --heading-font: 'Poppins', sans-serif;
     --site-font: 'Poppins', sans-serif;

@@ -1,4 +1,13 @@
-h1 {
+/* h1 {
     font: var(--heading-font);
     color: var(--primary-color);
+} */
+
+img {
+    width: 10px;
+
 }
+/* 
+.turn {
+    transform: rotate(-180deg);
+  } */
