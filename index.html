@@ -104,19 +104,18 @@
 
         <!-- vacature kaartjes filter knoppen bovenaan-->
         <section id="results-section">
-            <button id="cv-button" class="button">Plaats je CV</button>
-
-            <div id="filter-item">
-                <br>
-                <span>Sorteer op:</span>
-                <select id="sorting-options" class="button-dropdown">
-                    <option value="relevantie">Relevantie</option>
-                    <option value="afstand">Afstand</option>
-                    <option value="datum">Datum</option>
-                </select>
+            <div class="results-buttons">
+                <button id="cv-button" class="button">Plaats je CV</button>
+                <div class="filter-item">
+                    <label for="sorting-options">Sorteer op:</label>
+                    <select id="sorting-options" class="button-dropdown">
+                        <option value="relevantie">Relevantie</option>
+                        <option value="afstand">Afstand</option>
+                        <option value="datum">Datum</option>
+                    </select>
+                </div>
             </div>
-        </section>
-
+        </section>        
 
         <!-- Vacature kaartjes -->
         <section>
@@ -334,13 +333,53 @@
         </section>
     </main>
 
-    <!-- footer (moet nog af!!!!!!) -->
-    <!-- <footer>
-        <div class="footer-column">
-            <h3>Ontdek de schoonmaak</h3>
-            <p>Ontdek de Schoonmaak is de ultieme carrière/vacatureportal voor de schoonmaakbranche.</p>
-        </div>
-    </footer> -->
+    <footer>
+        <section class="footer-sectie">
+            <div class="footer-column">
+                <h2>Ontdek de Schoonmaak</h2>
+                <p>
+                    Ontdek de Schoonmaak is de ultieme carrière/vacatureportal voor de schoonmaakbranche.
+                    Een site waar alle werkgevers en (potentiële) werknemers feilloos de weg vinden naar hun nieuwe hire, of baan.
+                    <br><strong>In de schoonmaak is voor iedereen werk</strong>
+                </p>
+            </div>
+    
+            <div class="footer-column">
+                <h2>Meer over de schoonmaak</h2>
+                <ul>
+                    <li><span class="icon">📂</span> Participerende werkgevers</li>
+                    <li><span class="icon">✏️</span> Blog</li>
+                    <li><span class="icon">❓</span> FAQ
+                        <ul>
+                            <li>Wat verdient een schoonmaker?</li>
+                            <li>Wat verdient een schoonmaker?</li>
+                            <li>Wat verdient een schoonmaker?</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h2>Voor werkgevers</h2>
+                <ul>
+                    <li><span class="icon">📄</span> Plaats vacature</li>
+                    <li><span class="icon">🤝</span> Support voor bedrijven</li>
+                </ul>
+            </div>
+        </section>
+    
+        <section class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>© Ontdek de Schoonmaak</p>
+                <ul>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Voorwaarden</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+    
 </body>
 
 </html>

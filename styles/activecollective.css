@@ -46,6 +46,8 @@ body {
     --box-shadow: #0000001a;
     --full-box-shadow: 0 3px 10px #00000033;
 
+    --footer-color: #fdd835;
+
 
     --primary-color: var(--black);
     --primary-color-alt: #F6F3E8;

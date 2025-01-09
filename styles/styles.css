@@ -77,6 +77,7 @@ h1 {
     border-radius: var(--border-radius);
 }
 
+
 #afstand-knop {
     padding: 10px;
     font-size: var(--font-size-small);
@@ -120,6 +121,7 @@ h1 {
 .filter-item select,
 .filter-item input {
     padding: 10px;
+    margin: 0;
     font-size: var(--font-size-small);
     border: 1px solid var(--color-lightgray);
     border-radius: var(--border-radius);
@@ -127,7 +129,23 @@ h1 {
 
 .salaris-inputs {
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
+}
+
+.salaris-inputs input {
+    flex: 1 1 100%;
+    padding: 10px;
+    font-size: var(--font-size-small);
+    border: 1px solid var(--color-lightgray);
+    border-radius: var(--border-radius);
+    min-width: 0;
+}
+
+@media (min-width: 768px) {
+    .salaris-inputs input {
+        flex: 1;
+    }
 }
 
 .clear-filters-button {
@@ -148,9 +166,19 @@ h1 {
 
 #results-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 15px;
-    justify-content: space-between;
+    align-items: center; 
+    padding: 20px 0;
+}
+
+.results-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
 }
 
 .button {
@@ -161,7 +189,9 @@ h1 {
     padding: 10px 20px;
     border-radius: var(--border-radius);
     cursor: pointer;
-    margin-top: 15px;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap; 
 }
 
 .button:hover {
@@ -169,18 +199,35 @@ h1 {
     color: var(--white);
 }
 
-/* Dropdown styling */
 .button-dropdown {
     padding: 10px;
     font-size: var(--font-size-small);
     border: 1px solid var(--color-lightgray);
     border-radius: var(--border-radius);
     cursor: pointer;
+    white-space: nowrap; 
 }
 
-/* Optionele extra's voor select dropdown */
-.button-dropdown:focus {
-    outline: none;
+
+/* Sorteer-label styling */
+.filter-item label {
+    font-size: var(--font-size-small);
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: bold;
+    color: var(--black);
+}
+
+/* Responsiveness voor desktop */
+@media (min-width: 768px) {
+    #results-section {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+
+    .results-buttons {
+        justify-content: space-between; 
+    }
 }
 
 /* Vacaturekaarten */
@@ -227,4 +274,116 @@ h1 {
     background-color: var(--color-lightgray);
     border: none;
     padding: 10px;
+}
+
+/* Algemene footer-styling */
+.footer-sectie {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--footer-color);
+    padding: 20px;
+    color: var(--black);
+    font-family: var(--site-font);
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h2 {
+    font-size: var(--font-size-normal);
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    font-size: var(--font-size-small);
+    line-height: 1.5;
+}
+
+.footer-column p strong {
+    color: var(--white);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    font-size: var(--font-size-small);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-column ul li .icon {
+    margin-right: 8px;
+    font-size: var(--font-size-normal);
+}
+
+.footer-column ul li ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.footer-column ul li ul li {
+    font-size: var(--font-size-small);
+    margin-bottom: 5px;
+}
+
+/* Onderste footer */
+.footer-bottom {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 20px;
+    font-size: var(--font-size-small);
+    text-align: center;
+}
+
+/* Desktop uitbreidingen */
+@media (min-width: 768px) {
+    .footer-sectie {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-column {
+        max-width: 30%;
+    }
+
+    .footer-bottom-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        text-align: left;
+    }
+}
+
+.footer-bottom-content p {
+    margin: 0;
+}
+
+.footer-bottom-content ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-bottom-content ul li {
+    margin-left: 20px;
+}
+
+.footer-bottom-content ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-bottom-content ul li a:hover {
+    text-decoration: underline;
 }
