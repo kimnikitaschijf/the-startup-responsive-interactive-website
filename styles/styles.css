@@ -3,21 +3,21 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--off-white);
+    color: var(--soft-black);
     line-height: 1.6;
+    font-family: var(--site-font);
 }
 
 h1 {
     font-size: var(--font-size-huge);
+    font-family: var(--heading-font);
     text-align: center;
     margin: 20px 0;
     color: var(--primary-text-color);
-    /* background:rgba(0, 0, 0, .42); */
 }
 
 /* Header styling */
@@ -28,8 +28,10 @@ h1 {
     padding: 10px 20px;
     background-color: var(--black);
     color: var(--secondary-text-color);
+    position: sticky;
+    top: 0;
+    left: 0;
 }
-  
 
 #header-buttons button {
     background-color: var(--button-color);
@@ -39,6 +41,7 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     margin-left: 10px;
+    font-family: var(--button-font);
 }
 
 #header-buttons button:hover {
@@ -54,21 +57,34 @@ h1 {
     background: var(--white);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    font-family: var(--button-font);
 }
 
 #search-input-container {
     display: grid;
     gap: 10px;
     margin-bottom: 20px;
+    font-family: var(--button-font);
 }
 
-#search-input, #location-input {
+#search-input,
+#location-input {
     flex: 1;
     padding: 10px;
+    font-family: var(--button-font);
     font-size: var(--font-size-small);
     border: 1px solid var(--color-lightgray);
     border-radius: var(--border-radius);
 }
+
+#afstand-knop {
+    padding: 10px;
+    font-size: var(--font-size-small);
+    border: 1px solid var(--color-lightgray);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
 
 .zoek-button {
     background-color: var(--button-color);
@@ -78,6 +94,7 @@ h1 {
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
+    font-family: var(--button-font);
 }
 
 .zoek-button:hover {
@@ -114,6 +131,7 @@ h1 {
 }
 
 .clear-filters-button {
+    font-family: var(--button-font);
     background-color: var(--button-color);
     color: var(--black);
     border: none;
@@ -125,19 +143,64 @@ h1 {
 
 .clear-filters-button:hover {
     background-color: var(--button-hover);
-    color: var(--white)
+    color: var(--white);
+}
+
+#results-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.button {
+    font-family: var(--button-font);
+    background-color: var(--button-color);
+    color: var(--black);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+    color: var(--white);
+}
+
+/* Dropdown styling */
+.button-dropdown {
+    padding: 10px;
+    font-size: var(--font-size-small);
+    border: 1px solid var(--color-lightgray);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+/* Optionele extra's voor select dropdown */
+.button-dropdown:focus {
+    outline: none;
 }
 
 /* Vacaturekaarten */
+.vacature-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .vacature-card {
     background-color: var(--white);
     border-radius: var(--border-radius);
     box-shadow: var(--full-box-shadow);
-    padding: 20px;
+    padding: 1em;
     margin: 20px 0;
+    font-size: var(--font-size-small);
 }
 
 .vacature-card h2 {
+    font-family: var(--heading-font);
     font-size: var(--font-size-medium);
     color: var(--primary-text-color);
     margin-bottom: 10px;
@@ -152,6 +215,7 @@ h1 {
     border-radius: var(--half-border-radius);
     text-decoration: none;
     font-size: var(--font-size-small);
+    font-family: var(--button-font);
 }
 
 .vacature-knop:hover {

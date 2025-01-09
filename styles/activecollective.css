@@ -40,7 +40,9 @@ body {
 
     /* Kleuren */
     --black: #000000;
+    --soft-black: #333;
     --white: #FFFFFF;
+    --off-white: #F9F9F9;
     --box-shadow: #0000001a;
     --full-box-shadow: 0 3px 10px #00000033;
 
@@ -127,17 +129,6 @@ body {
     }
 }
 
-/* =============================================
-   Custom Fonts
-   ============================================= */
-
-@font-face {
-    font-family: 'icomoon';
-    src: url('/fonts/icomoon.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
 
 /* =============================================
    Standaard Elementen

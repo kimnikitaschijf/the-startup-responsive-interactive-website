@@ -45,10 +45,25 @@
                 <div class="filter-item">
                     <label for="banen">Beroepen</label>
                     <select id="banen">
-                        <option value="schoonmaak vacatures">Schoonmaak</option>
-                        <option value="administratie vacatures">Administratie</option>
+                        <option value="schoonmaak vacatures">Schoonmaker</option>
                         <option value="glazenwasser vacatures">Glazenwasser</option>
-                        <!-- ... andere opties -->
+                        <option value="gevelreiniger vacatures">Gevelreiniger</option>
+                        <option value="vloerspecialist vacatures">Vloerspecialist</option>
+                        <option value="calamiteitenreiniger vacatures">Calamiteitenreiniger</option>
+                        <option value="industrieel reiniger vacatures">Industrieel reiniger</option>
+                        <option value="specialistisch reiniger vacatures">Specialistisch reiniger</option>
+                        <option value="voorwerker vacatures">Voorwerker</option>
+                        <option value="objectleider vacatures">Objectleider/ teamleider</option>
+                        <option value="rayonleider vacatures">Rayonleider</option>
+                        <option value="administratie vacatures">Administratie</option>
+                        <option value="financieel vacatures">Financieel</option>
+                        <option value="hr-recruitment vacatures">HR & recruitment</option>
+                        <option value="kwaliteit-veiligheid vacatures">Kwaliteit & Veiligheid</option>
+                        <option value="management vacatures">Management</option>
+                        <option value="marketing-communicatie vacatures">Marketing & Communicatie</option>
+                        <option value="projectmanagement vacatures">Projectmanagement</option>
+                        <option value="sales vacatures">Sales</option>
+                        <option value="overig vacatures">Overig</option>
                     </select>
                 </div>
 
@@ -62,7 +77,7 @@
 
                 <div class="filter-item">
                     <label for="afstand-knop">Afstand</label>
-                    <select id="omgeving">
+                    <select id="afstand-knop">
                         <option value="-1km"> minder dan 1 km</option>
                         <option value="1-5km">1 - 5 km</option>
                         <option value="6-10km">6 - 10 km</option>
@@ -87,42 +102,245 @@
             </div>
         </section>
 
-        <!-- vacature kaartjes -->
+        <!-- vacature kaartjes filter knoppen bovenaan-->
         <section id="results-section">
-            <button id="upload-cv-button">Plaats je CV</button>
+            <button id="cv-button" class="button">Plaats je CV</button>
 
-            <div id="sorting">
+            <div id="filter-item">
+                <br>
                 <span>Sorteer op:</span>
-                <button>Relevantie</button>
-                <button>Datum</button>
-                <button>Afstand</button>
+                <select id="sorting-options" class="button-dropdown">
+                    <option value="relevantie">Relevantie</option>
+                    <option value="afstand">Afstand</option>
+                    <option value="datum">Datum</option>
+                </select>
             </div>
+        </section>
 
-            <div class="vacature-card">
-                <div>
-                    <h2>Titel van vacature</h2>
-                    <p class="vacature-locatie">Blofsteeg a/d Lek</p>
-                    <p class="vacature-uren">8 tot 16 uur p.w.</p>
-                    <p class="vacature-salaris">€13,12 - €16,98 per uur</p>
-                    <p class="vacature-beschrijving">Woon jij in Zwaansmeer, Blofsteeg of Smilderheul en ben je op zoek
-                        naar
-                        een baan in de schoonmaak als vloerspecialist? Dan is dit voor jou!</p>
+
+        <!-- Vacature kaartjes -->
+        <section>
+            <!-- Vacature 1 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Vloerspecialist schoonmaker</h2>
+                        <p class="vacature-locatie">Blofsteeg a/d Lek</p>
+                        <p class="vacature-uren">8 tot 16 uur p.w.</p>
+                        <p class="vacature-salaris">€13,12 - €16,98 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Woon jij in Zwaansmeer, Blofsteeg of Smilderheul en ben je op
+                            zoek
+                            naar
+                            een baan in de schoonmaak als vloerspecialist? Dan is dit voor jou!</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
                 </div>
-                <div>
-                    <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
-                    <a href="#" class="vacature-knop">Bekijk de vacature</a>
+            </article>
+
+            <!-- Vacature 1 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Schoonmaker Kantoorpand</h2>
+                        <p class="vacature-locatie">Amsterdam Centrum</p>
+                        <p class="vacature-uren">12 tot 20 uur p.w.</p>
+                        <p class="vacature-salaris">€12,50 - €15,00 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Ben jij een ochtendmens en houd je van schoonmaken? Werk als
+                            schoonmaker in een modern kantoorpand in Amsterdam.</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
                 </div>
-            </div>
+            </article>
+
+            <!-- Vacature 2 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Glazenwasser Particulier</h2>
+                        <p class="vacature-locatie">Rotterdam Noord</p>
+                        <p class="vacature-uren">20 tot 30 uur p.w.</p>
+                        <p class="vacature-salaris">€14,00 - €18,00 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Wij zoeken een glazenwasser voor luxe woningen in Rotterdam.
+                            Ervaring is een pré, maar niet verplicht.</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Vacature 3 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Industrieel Schoonmaker</h2>
+                        <p class="vacature-locatie">Eindhoven</p>
+                        <p class="vacature-uren">40 uur p.w.</p>
+                        <p class="vacature-salaris">€15,50 - €20,00 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Werk jij graag met machines en in een uitdagende omgeving? Word
+                            industrieel schoonmaker in Eindhoven.</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Vacature 4 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Specialistisch Reiniger</h2>
+                        <p class="vacature-locatie">Den Haag</p>
+                        <p class="vacature-uren">24 uur p.w.</p>
+                        <p class="vacature-salaris">€17,00 - €22,00 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Heb jij ervaring met het reinigen van vloeren en gevels? Werk
+                            aan specialistische schoonmaakprojecten in Den Haag.</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Vacature 5 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Schoonmaker Ziekenhuis</h2>
+                        <p class="vacature-locatie">Utrecht</p>
+                        <p class="vacature-uren">16 tot 24 uur p.w.</p>
+                        <p class="vacature-salaris">€13,50 - €16,50 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Zorg voor een schone en veilige omgeving voor patiënten en
+                            personeel in een ziekenhuis in Utrecht.</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Vacature 6 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Voorwerker Schoonmaak</h2>
+                        <p class="vacature-locatie">Arnhem</p>
+                        <p class="vacature-uren">32 uur p.w.</p>
+                        <p class="vacature-salaris">€14,50 - €18,50 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Leid een team van schoonmakers en zorg dat alles soepel
+                            verloopt bij grote projecten in Arnhem.</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Vacature 7 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Calamiteiten Reiniger</h2>
+                        <p class="vacature-locatie">Zwolle</p>
+                        <p class="vacature-uren">28 tot 36 uur p.w.</p>
+                        <p class="vacature-salaris">€16,00 - €21,00 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Help bij het reinigen van panden na brand of wateroverlast.
+                            Werk met een dynamisch team in Zwolle.</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Vacature 8 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Vloerspecialist</h2>
+                        <p class="vacature-locatie">Leiden</p>
+                        <p class="vacature-uren">20 tot 25 uur p.w.</p>
+                        <p class="vacature-salaris">€15,00 - €19,00 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Reinig en onderhoud vloeren in scholen en openbare gebouwen in
+                            de regio Leiden.</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Vacature 9 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Rayonleider Schoonmaak</h2>
+                        <p class="vacature-locatie">Haarlem</p>
+                        <p class="vacature-uren">40 uur p.w.</p>
+                        <p class="vacature-salaris">€19,00 - €24,00 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Ben jij een geboren leider? Beheer en coördineer
+                            schoonmaakprojecten in jouw regio.</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Vacature 10 -->
+            <article class="vacature-container">
+                <div class="vacature-card">
+                    <div>
+                        <h2>Schoonmaker Evenementenlocatie</h2>
+                        <p class="vacature-locatie">Maastricht</p>
+                        <p class="vacature-uren">10 tot 15 uur p.w.</p>
+                        <p class="vacature-salaris">€12,00 - €14,00 per uur</p>
+                        <br>
+                        <p class="vacature-beschrijving">Maak evenementenhallen en locaties schoon na evenementen.
+                            Flexibele uren en een leuke werksfeer!</p>
+                    </div>
+                    <div>
+                        <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                        <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                    </div>
+                </div>
+            </article>
+
         </section>
     </main>
 
-    <!-- footer -->
-    <footer>
+    <!-- footer (moet nog af!!!!!!) -->
+    <!-- <footer>
         <div class="footer-column">
             <h3>Ontdek de schoonmaak</h3>
             <p>Ontdek de Schoonmaak is de ultieme carrière/vacatureportal voor de schoonmaakbranche.</p>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
