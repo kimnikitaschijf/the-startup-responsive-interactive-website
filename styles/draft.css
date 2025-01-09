@@ -1,0 +1,160 @@
+
+form {
+    display: grid;
+    gap: 1em;
+    padding: 2em;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+label {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: var(--line-height-normal);
+    display: block;
+}
+
+input {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--box-shadow);
+    /* border-radius: 20px 0 20px; */
+    padding: .8em 1em;
+    width: 100%;
+    color: var(--primary-text-color);
+    margin-top: .5em;
+    line-height: var(--line-height-normal);
+}
+
+input[type="submit"] {
+    background-color: var(--button-color);
+    color: var(--primary-text-color);
+    padding: 0.7em 1.4em;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    width: 60%;
+    transition: transform .4s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--button-hover);
+    color: var(--secondary-text-color);
+    transform: scale(1.05);
+}
+
+select {
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius);
+    border-color: var(--box-shadow);
+    /* border-radius: 20px 0 20px; */
+    padding: .8em 1em;
+    width: 100%;
+    color: var(--primary-text-color);
+    margin-top: .5em;
+    line-height: var(--line-height-normal);
+}
+
+/* Styling voor de option-items */
+select option {
+    background-color: var(--button-color);
+    color: var(--secondary-text-color);
+    padding: 0.7em 1.4em;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    width: 60%;
+    transition: transform .2s ease-in-out;
+}
+
+
+/* Styling fieldset */
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+fieldset input {
+    accent-color: var(--accent-color);
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0em 0.6em;
+}
+
+input:invalid {
+    border: 2px solid var(--error-color);
+    background-color: var(--white);
+}
+
+fieldset label {
+    align-items: center;
+    display: flex;
+}
+
+legend {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: 1.5em;
+    display: block;
+    margin-bottom: 0.8em;
+}
+
+.req {
+    color: var(--error-color);
+}
+
+/* =============================================
+   Knoppen
+   ============================================= */
+
+#knoppen {
+    padding: 3em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#knoppen p {
+    margin: -0.9em 0 1em 0;
+}
+
+/* =============================================
+   Links
+   ============================================= */
+
+button {
+    font-size: var(--font-size-normal);
+    line-height: var(--line-height-normal);
+    color: var(--main-text-color);
+    transition: transform ease-in-out .2s;
+}
+
+button:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Knop geel */
+a.btn-geel {
+    align-self: baseline;
+    background-color: var(--button-color);
+    color: var(--primary-text-color);
+    padding: 0.7em 1.4em;
+    border-radius: 100px;
+    text-decoration: none;
+    gap: 0.5em;
+    transition: transform .2s ease-in-out;
+    font-weight: 600;
+    align-items: center;
+    display: inline-flex;
+    font-size: var(--font-size-normal);
+}
+
+.btn-geel img {
+    align-items: center;
+    width: 0.9em;
+}
+
+a.btn-geel:hover {
+    color: var(--secondary-text-color);
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}

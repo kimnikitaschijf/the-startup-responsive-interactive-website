@@ -6,172 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacatures</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <!-- <link rel="stylesheet" href="styles/activecollective.css">
-    <script src="main.js" defer></script> -->
+    <link rel="stylesheet" href="styles/activecollective.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
 
     <!-- volledige header section -->
-
     <header>
+        <div id="header-container">
+            <!-- header logo -->
+            <img src="assets/LOGO (2).svg">
 
-        <!-- header logo -->
+            <!-- navigatieknoppen -->
+            <div id="header-buttons">
+                <button id="profiel-button">Profiel</button>
+                <button id="menu-button">Menu</button>
+            </div>
+        </div>
 
-        <div id="logo">Logo</div>
-
-        <!-- header profiel button/link -->
-
-        <button id="profiel-button">Profiel</button>
-
-        <!-- header nav menu -->
-
-        <button id="menu-button">Menu</button>
-
-        <!-- titel kop -->
-
+        <!-- titel -->
         <h1>Vacatures</h1>
     </header>
 
     <!-- zoek input balken -->
-
     <main>
-
         <section id="search-section">
             <form id="search-form">
-
-                <!-- kies een beroep balk -->
-
-                <input type="text" id="search-input" placeholder="Kies een beroep">
-
-                <!-- locatie balk -->
-
-                <input type="text" id="location-input" placeholder="Voer plaats / postcode in">
-
-                <!-- zoek knop -->
-                <button class="zoek-button">Vacatures zoeken</button>
+                <div id="search-input-container">
+                    <input type="text" id="search-input" name="beroep" placeholder="Kies een beroep">
+                    <input type="text" id="location-input" name="locatie" placeholder="Voer plaats / postcode in">
+                </div>
+                <input type="submit" class="zoek-button" value="Zoek">
             </form>
 
             <!-- filter knoppen -->
-
             <div id="filters">
-                <ul>
-                    <!-- Beroepen filter -->
+                <div class="filter-item">
+                    <label for="banen">Beroepen</label>
+                    <select id="banen">
+                        <option value="schoonmaak vacatures">Schoonmaak</option>
+                        <option value="administratie vacatures">Administratie</option>
+                        <option value="glazenwasser vacatures">Glazenwasser</option>
+                        <!-- ... andere opties -->
+                    </select>
+                </div>
 
-                    <li>
-                        <button class="filter-knop">Beroepen
-                            <select id="banen">
-                                <option value="schoonmaak vacatures">Schoonmaak</option>
-                                <option value="administratie vacatures">Administratie</option>
-                                <option value="gevelreiniger vacatures">Gevelreiniger</option>
-                                <option value="glazenwasser vacatures">Glazenwasser</option>
-                                <option value="vloerspecialist">Vloerspecialist</option>
-                                <option value="calamiteitenreiniger">Calamiteitenreiniger</option>
-                                <option value="industrieel-reiniger">Industrieel reiniger</option>
-                                <option value="specialistisch-reiniger">Specialistisch reiniger</option>
-                                <option value="voorwerker">Voorwerker</option>
-                                <option value="objectleider-teamleider">Objectleider/ teamleider</option>
-                                <option value="rayonleider">Rayonleider</option>
-                                <option value="financieel">Financieel</option>
-                                <option value="hr-recruitment">HR & recruitment</option>
-                                <option value="kwaliteit-veiligheid">Kwaliteit & Veiligheid</option>
-                                <option value="management">Management</option>
-                                <option value="marketing-communicatie">Marketing & Communicatie</option>
-                                <option value="projectmanagement">Projectmanagement</option>
-                                <option value="sales">Sales</option>
-                                <option value="overig">Overige</option>
-                            </select>
-                            <img src="assets/arrow-down.svg">
-                        </button>
-                    </li>
+                <div class="filter-item">
+                    <label for="omgeving">Werkomgeving</label>
+                    <select id="omgeving">
+                        <option value="kantoorpanden">Kantoorpanden</option>
+                        <option value="particulier">Particulier</option>
+                    </select>
+                </div>
 
-                    <!-- Werkomgeving filter -->
+                <div class="filter-item">
+                    <label for="afstand-knop">Afstand</label>
+                    <select id="omgeving">
+                        <option value="-1km"> minder dan 1 km</option>
+                        <option value="1-5km">1 - 5 km</option>
+                        <option value="6-10km">6 - 10 km</option>
+                        <option value="10-20km">10 - 20 km</option>
+                        <option value="20-40km">20 - 40 km</option>
+                        <option value="40+km">meer dan 40 km</option>
+                    </select>
+                </div>
 
-                    <li>
-                        <button class="filter-knop">Werkomgeving
-                            <select id="omgeving">
-                                <option value="kantoorpanden">Kantoorpanden</option>
-                                <option value="particulier">Particulier</option>
-                                <option value="werkomgeving">Werkomgeving</option>
-                                <option value="werkomgeving">Werkomgeving</option>
-                                <option value="werkomgeving">Werkomgeving</option>
-                            </select>
-                            <img src="assets/arrow-down.svg">
-                        </button>
-                    </li>
-
-                    <!-- Type baan filter -->
-
-                    <li>
-                        <button class="filter-knop">Type baan
-                            <select id="banen">
-                                <option value="fulltime">Fulltime</option>
-                                <option value="parttime">Parttime</option>
-                                <option value="stage">Stage</option>
-                            </select>
-                            <img src="assets/arrow-down.svg">
-                        </button>
-                    </li>
-
-                    <!-- Afstand filter -->
-
-                    <li>
-                        <button class="filter-knop">Afstand
-                            <input type="range" min="0" max="142" value="50" class="slider" id="afstand-knop">
-                            <img src="assets/arrow-down.svg">
-                        </button>
-                    </li>
-
-                    <!-- Salaris filter -->
-
-                    <li>
-                        <button class="filter-knop">Salaris
-                            <label for="min-salaris">€</label>
-                            <input type="number" id="min-salaris" name="min-salaris" placeholder="15">
-                            <span>Tot</span>
-                            <input type="number" id="max-salaris" name="max-salaris" placeholder="30">
-                            <span>p/u</span>
-                            <img src="assets/arrow-down.svg">
-                        </button>
-                    </li>
-
-                    <!-- Vergoeding filter -->
-
-                    <li>
-                        <button class="filter-knop">Reiskostenvergoeding
-                            <select id="vergoeding">
-                                <option value="ja">Ja</option>
-                                <option value="nee">Nee</option>
-                            </select>
-                            <img src="assets/arrow-down.svg">
-                        </button>
-                    </li>
-
-                    <!-- Collega's filter -->
-
-                    <li>
-                        <button class="filter-knop">Collega's
-                            <select id="banen">
-                                <option value="ja">Ja</option>
-                                <option value="nee">Nee</option>
-                                <option value="onbekend">Onbekend</option>
-                            </select>
-                            <img src="assets/arrow-down.svg">
-                        </button>
-                    </li>
-                </ul>
+                <div class="filter-item">
+                    <label for="min-salaris">Salaris</label>
+                    <div class="salaris-inputs">
+                        <input type="number" id="min-salaris" name="min-salaris" placeholder="15">
+                        <!-- <span>Tot</span> -->
+                        <input type="number" id="max-salaris" name="max-salaris" placeholder="30">
+                    </div>
+                </div>
             </div>
 
-            <!-- Wis alle filters button -->
             <div>
-                <button>Wis alle filters</button>
+                <button class="clear-filters-button">Wis alle filters</button>
             </div>
         </section>
 
-        <!-- Vacature kaartjes section -->
-
+        <!-- vacature kaartjes -->
         <section id="results-section">
-            <button>Plaats je CV</button>
+            <button id="upload-cv-button">Plaats je CV</button>
 
             <div id="sorting">
                 <span>Sorteer op:</span>
@@ -180,98 +98,31 @@
                 <button>Afstand</button>
             </div>
 
-            <!-- vacature kaartje dummy -->
-
             <div class="vacature-card">
-                <h2>Titel van vacature</h2>
-                <p class="vacature-locatie">Blofsteeg a/d Lek</p>
-                <p class="vacature-uren"></p>8 tot 16 uur p.w.</p>
-                <p class="vacature-salaris"></p>€13,12 - €16,98 per uur</p>
-                <p class="vacature-beschrijving"></p>Woon jij in Zwaansmeer, Blofsteeg of Smilderheul en ben je
-                op zoek naar een baan in de schoonmaak als vloerspecialist? Dan is dit voor jou!</p>
-                <a href="#" class="vacature-knop">Bekijk de vacature</a>
-            </div>
-
-            <!-- vacature kaartje dummy -->
-
-            <div class="vacature-card">
-                <h2>Titel van vacature</h2>
-                <p class="vacature-locatie">Blofsteeg a/d Lek</p>
-                <p class="vacature-uren"></p>8 tot 16 uur p.w.</p>
-                <p class="vacature-salaris"></p>€13,12 - €16,98 per uur</p>
-                <p class="vacature-beschrijving"></p>Woon jij in Zwaansmeer, Blofsteeg of Smilderheul en ben je
-                op zoek naar een baan in de schoonmaak als vloerspecialist? Dan is dit voor jou!</p>
-                <a href="#" class="vacature-knop">Bekijk de vacature</a>
-            </div>
-
-            <!-- vacature kaartje dummy -->
-
-            <div class="vacature-card">
-                <h2>Titel van vacature</h2>
-                <p class="vacature-locatie">Blofsteeg a/d Lek</p>
-                <p class="vacature-uren"></p>8 tot 16 uur p.w.</p>
-                <p class="vacature-salaris"></p>€13,12 - €16,98 per uur</p>
-                <p class="vacature-beschrijving"></p>Woon jij in Zwaansmeer, Blofsteeg of Smilderheul en ben je
-                op zoek naar een baan in de schoonmaak als vloerspecialist? Dan is dit voor jou!</p>
-                <a href="#" class="vacature-knop">Bekijk de vacature</a>
-            </div>
-
-            <!-- vacature kaartje dummy -->
-
-            <div class="vacature-card">
-                <h2>Titel van vacature</h2>
-                <p class="vacature-locatie">Blofsteeg a/d Lek</p>
-                <p class="vacature-uren"></p>8 tot 16 uur p.w.</p>
-                <p class="vacature-salaris"></p>€13,12 - €16,98 per uur</p>
-                <p class="vacature-beschrijving"></p>Woon jij in Zwaansmeer, Blofsteeg of Smilderheul en ben je
-                op zoek naar een baan in de schoonmaak als vloerspecialist? Dan is dit voor jou!</p>
-                <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                <div>
+                    <h2>Titel van vacature</h2>
+                    <p class="vacature-locatie">Blofsteeg a/d Lek</p>
+                    <p class="vacature-uren">8 tot 16 uur p.w.</p>
+                    <p class="vacature-salaris">€13,12 - €16,98 per uur</p>
+                    <p class="vacature-beschrijving">Woon jij in Zwaansmeer, Blofsteeg of Smilderheul en ben je op zoek
+                        naar
+                        een baan in de schoonmaak als vloerspecialist? Dan is dit voor jou!</p>
+                </div>
+                <div>
+                    <button class="save-button"><img src="/assets/save-instagram.svg" alt="opslaan"></button>
+                    <a href="#" class="vacature-knop">Bekijk de vacature</a>
+                </div>
             </div>
         </section>
-
-        <!-- footer section -->
-
-        <footer>
-
-            <!-- footer sectie 1 -->
-
-            <div class="footer-column">
-                <h3>Ontdek de schoonmaak</h3>
-                <p>Ontdek de Schoonmaak is de ultieme carrière/vacatureportal voor de schoonmaakbranche. Een site
-                    waar alle werkgevers en (potentiële) werknemers feilloos de weg vinden naar hun nieuwe hire, of
-                    baan.</p>
-                <p>In de schoonmaak is voor iedereen werk</p>
-            </div>
-
-            <!-- footer sectie 2 -->
-
-            <div class="footer-column">
-                <h3>Meer over de schoonmaak</h3>
-                <p>Participerende werkgevers</p>
-                <p>Blog</p>
-                <p>FAQ
-                <ul>
-                    <li>Wat verdient een schoonmaker?</li>
-                    <li>Wat verdient een schoonmaker?</li>
-                    <li>Wat verdient een schoonmaker?</li>
-                </ul>
-                </p>
-            </div>
-
-            <!-- footer sectie 3 -->
-
-            <div class="footer-column">
-                <h3>Voor werkgevers</h3>
-                <p>Plaats vacature</p>
-                <p>Support voor bedrijven</p>
-            </div>
-
-            <!-- footer logo img -->
-
-            <img src="assets/arrow-down.svg">
-        </footer>
-
     </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-column">
+            <h3>Ontdek de schoonmaak</h3>
+            <p>Ontdek de Schoonmaak is de ultieme carrière/vacatureportal voor de schoonmaakbranche.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

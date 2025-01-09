@@ -1,13 +1,166 @@
-/* h1 {
-    font: var(--heading-font);
-    color: var(--primary-color);
-} */
-
-img {
-    width: 10px;
-
+/* Algemene styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
-/* 
-.turn {
-    transform: rotate(-180deg);
-  } */
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: var(--font-size-huge);
+    text-align: center;
+    margin: 20px 0;
+    color: var(--primary-text-color);
+    /* background:rgba(0, 0, 0, .42); */
+}
+
+/* Header styling */
+#header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--black);
+    color: var(--secondary-text-color);
+}
+  
+
+#header-buttons button {
+    background-color: var(--button-color);
+    color: var(--primary-text-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#header-buttons button:hover {
+    background-color: var(--button-hover);
+    color: var(--secondary-text-color);
+}
+
+/* Zoeksectie */
+#search-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+#search-input-container {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search-input, #location-input {
+    flex: 1;
+    padding: 10px;
+    font-size: var(--font-size-small);
+    border: 1px solid var(--color-lightgray);
+    border-radius: var(--border-radius);
+}
+
+.zoek-button {
+    background-color: var(--button-color);
+    color: var(--black);
+    padding: 10px 20px;
+    font-size: var(--font-size-small);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.zoek-button:hover {
+    background-color: var(--button-hover);
+    color: var(--white);
+}
+
+/* Filters */
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.filter-item {
+    flex: 1 1 calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-item select,
+.filter-item input {
+    padding: 10px;
+    font-size: var(--font-size-small);
+    border: 1px solid var(--color-lightgray);
+    border-radius: var(--border-radius);
+}
+
+.salaris-inputs {
+    display: flex;
+    gap: 5px;
+}
+
+.clear-filters-button {
+    background-color: var(--button-color);
+    color: var(--black);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.clear-filters-button:hover {
+    background-color: var(--button-hover);
+    color: var(--white)
+}
+
+/* Vacaturekaarten */
+.vacature-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--full-box-shadow);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.vacature-card h2 {
+    font-size: var(--font-size-medium);
+    color: var(--primary-text-color);
+    margin-bottom: 10px;
+}
+
+.vacature-knop {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--button-color);
+    color: var(--black);
+    padding: 10px 15px;
+    border-radius: var(--half-border-radius);
+    text-decoration: none;
+    font-size: var(--font-size-small);
+}
+
+.vacature-knop:hover {
+    background-color: var(--button-hover);
+    color: var(--white);
+}
+
+.save-button {
+    background-color: var(--color-lightgray);
+    border: none;
+    padding: 10px;
+}
