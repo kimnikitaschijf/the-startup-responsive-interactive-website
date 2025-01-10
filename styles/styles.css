@@ -282,7 +282,7 @@ h1 {
 .footer-sectie {
     display: flex;
     flex-direction: column;
-    background-color: var(--footer-color);
+    background-color: var(--accent-color);
     padding: 20px;
     color: var(--black);
     font-family: var(--site-font);
