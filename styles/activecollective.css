@@ -47,6 +47,7 @@ body {
     --full-box-shadow: 0 3px 10px #00000033;
 
     --footer-color: #fdd835;
+    --see-through-color: #00000080;
 
 
     --primary-color: var(--black);
