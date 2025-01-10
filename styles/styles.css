@@ -301,6 +301,25 @@ body {
     padding: 10px;
 }
 
+.meer-vacatures-button {
+    font-family: var(--button-font);
+    font-size: var(--font-size-small);
+    background-color: var(--white);
+    color: var(--black);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.meer-vacatures-button:hover {
+    background-color: var(--button-hover);
+    color: var(--white);
+    font-size: var(--font-size-small);
+    border: none;
+}
+
+
 /* Algemene footer-styling */
 .footer-sectie {
     display: flex;
