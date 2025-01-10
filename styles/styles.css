@@ -165,11 +165,13 @@ h1 {
 }
 
 #results-section {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center; 
-    padding: 20px 0;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    font-family: var(--button-font);
 }
 
 .results-buttons {
@@ -178,7 +180,7 @@ h1 {
     gap: 10px;
     justify-content: center; 
     align-items: center;
-    width: 100%;
+    max-width: 800px;
 }
 
 .button {
