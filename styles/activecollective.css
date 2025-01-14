@@ -86,7 +86,6 @@ body {
     /* Hoeken */
     --border-radius: 10px;
     --half-border-radius: 20px 0 20px;
-
 }
 
 /* =============================================
@@ -94,7 +93,7 @@ body {
    ============================================= */
 
 @media screen and (min-width: 481px) {
-    :root {
+    body {
         --font-size-huge: 4rem;
         --font-size-large: 3rem;
         --font-size-medium: 2rem;
@@ -107,7 +106,7 @@ body {
 }
 
 @media screen and (min-width: 769px) {
-    :root {
+    body {
         --font-size-huge: 5rem;
         --font-size-large: 3.6rem;
         --font-size-medium: 2.2rem;
@@ -121,7 +120,7 @@ body {
 }
 
 @media screen and (min-width: 1201px) {
-    :root {
+    body {
         --font-size-huge: 6rem;
         --font-size-large: 4.2rem;
         --font-size-medium: 2.5rem;
